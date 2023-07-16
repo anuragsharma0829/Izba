@@ -379,7 +379,7 @@ $(document).ready(function () {
           email: email,
           password: password
       };
-      fetch("https://cleanstation.backendless.app/api/data/Usersr", {
+      fetch("https://cleanstation.backendless.app/api/data/Users", {
 method: "POST",
 body: JSON.stringify(userData),
 headers: {
