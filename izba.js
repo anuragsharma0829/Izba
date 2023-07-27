@@ -1416,58 +1416,58 @@ document.getElementById("SigninButton2").addEventListener("click", function () {
     });
 });
 // User Regitration
-$(document).ready(function () {
-  $("#SignUpButton").click(function () {
-    let firstName = $("#firstName").val();
-    let lastName = $("#lastName").val();
-    let email = $("#email").val();
-    let password = $("#password").val();
+// $(document).ready(function () {
+//   $("#SignUpButton").click(function () {
+//     let firstName = $("#firstName").val();
+//     let lastName = $("#lastName").val();
+//     let email = $("#email").val();
+//     let password = $("#password").val();
 
-    let userData = {
-      first_name: firstName,
-      last_name: lastName,
-      email: email,
-      password: password,
-    };
-    fetch("https://cleanstation.backendless.app/api/data/Users", {
-      method: "POST",
-      body: JSON.stringify(userData),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Something went wrong"); // Throw an error if the response is not successful
-        }
-        return response.json();
-      })
-      .then((data) => {
-        console.log("user saved:", data);
-        console.log("Registration Success");
-        Swal.fire({
-          position: "top-end",
-          icon: "success",
-          title: "User Registration Success",
-          showConfirmButton: false,
-          timer: 2500,
-        });
+//     let userData = {
+//       first_name: firstName,
+//       last_name: lastName,
+//       email: email,
+//       password: password,
+//     };
+//     fetch("https://cleanstation.backendless.app/api/data/Users", {
+//       method: "POST",
+//       body: JSON.stringify(userData),
+//       headers: {
+//         "Content-type": "application/json; charset=UTF-8",
+//       },
+//     })
+//       .then((response) => {
+//         if (!response.ok) {
+//           throw new Error("Something went wrong"); // Throw an error if the response is not successful
+//         }
+//         return response.json();
+//       })
+//       .then((data) => {
+//         console.log("user saved:", data);
+//         console.log("Registration Success");
+//         Swal.fire({
+//           position: "top-end",
+//           icon: "success",
+//           title: "User Registration Success",
+//           showConfirmButton: false,
+//           timer: 2500,
+//         });
 
-        $("#loginSection").show();
-        $("#registrationSectionId").hide();
-        $("#GetStartedSection").hide();
-      })
-      .catch((error) => {
-        Swal.fire({
-          position: "top-end",
-          icon: "error",
-          title: "Something went wrong",
-          showConfirmButton: false,
-          timer: 2500,
-        });
-      });
-  });
-});
+//         $("#loginSection").show();
+//         $("#registrationSectionId").hide();
+//         $("#GetStartedSection").hide();
+//       })
+//       .catch((error) => {
+//         Swal.fire({
+//           position: "top-end",
+//           icon: "error",
+//           title: "Something went wrong",
+//           showConfirmButton: false,
+//           timer: 2500,
+//         });
+//       });
+//   });
+// });
 
 // Set calculate days
 function calculateDays() {
