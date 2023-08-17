@@ -1877,9 +1877,6 @@ $("#ProductBlockTab").click(function () {
 
 $("#fcBlockTab").click(function () {
     $("#ProductDetailSection").hide();
-    // $("#fcBlock").show();
-    $("#MainSection").show();
-    // $("#ProductDetailSection").hide();
     $("#UploadProductFileSection").hide();
     $("#CreateFulfillmentContractSection").hide();
     $("#fulfillmentContractSection").hide();
@@ -1890,7 +1887,9 @@ $("#fcBlockTab").click(function () {
     $("#NewFulfillmentCenterSection").hide();
     $("#UpdateFulfillmentContractSection").hide();
     $("#FulfillmentContractDetailSection").hide();
-    // $("#MainSection").show();
+    $("#fcBlock").show();
+    $("#MainSection").show();
+
     document.getElementById("fcBlockTab").style.borderBottom = "#78C045";
     document.getElementById("ProductBlockTab").style.borderBottom = "none";
 
@@ -2214,11 +2213,4 @@ function daydiff() {
 }
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    var buttons = document.querySelectorAll("button"); // Aapko apne buttons ke selector ke hisab se yeh badalna hoga
-    
-    buttons.forEach(function(button) {
-        button.style.pointerEvents = "none";
-        button.style.cursor = "default";
-    });
-});
+document.getElementById("daysDifferencetoshow").innerHTML = daysDifference;
