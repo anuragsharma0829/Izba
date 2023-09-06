@@ -122,7 +122,7 @@ async function setAuditDataInFields(objectId) {
             throw new Error('Network response was not ok.');
         }
         const auditData = await response.json();
-        console.log("Console audit data",auditData);
+        console.log("Console",auditData);
         if (auditData) {
           console.log("Invoice To Audit Data",auditData);
             // Set data in the fields
