@@ -116,6 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // }
 
 async function setAuditDataInFields(objectId) {
+  alert(objectId);
     try {
         const response = await fetch(`https://cleanstation.backendless.app/api/services/Audit/InvoiceToAudit?Id=${objectId}`);
         if (!response.ok) {
