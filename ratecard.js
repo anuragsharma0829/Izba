@@ -123,7 +123,7 @@ async function setAuditDataInFields(objectId) {
         }
         const auditData = await response.json();
         console.log("Console audit data",auditData);
-        if (auditData.length > 0) {
+        if (auditData) {
           console.log("Invoice To Audit Data",auditData);
             // Set data in the fields
             
