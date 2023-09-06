@@ -125,7 +125,7 @@ async function setAuditDataInFields(objectId) {
     }
     const auditData = await response.json();
     console.log("Invoice To Audit Data", auditData);
-    if (auditData && auditData.Status === "Completed") {
+    if (auditData && auditData.Status == "Completed") {
       // Set data in the fields
 
       document.getElementById("No_of_orders").innerHTML =
