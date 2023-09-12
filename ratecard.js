@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // }
 
 async function setAuditDataInFields(objectId) {
-    try { 
+    try {
         const response = await fetch(`https://cleanstation.backendless.app/api/services/Audit/InvoiceToAudit?Id=${objectId}`);
         if (!response.ok) {
             throw new Error('Network response was not ok.');
@@ -170,28 +170,22 @@ async function setAuditDataInFields(objectId) {
             $("#InvoiceToAuditWrapper").show();
             displayServiceData(auditData);
 
-        }else if (auditData.Audit_Status !== "Completed") {
-          // document.getElementById('AuditStatusBlock').style.display = "Block";
-          $("#AuditStatusBlock").show(); 
-          document.getElementById('auditStatusDisplay').innerHTML = auditData.Audit_Status;  
-          
-        }
-        else if (auditData == null) {
-          // document.getElementById('auditStatusMsgBlock').style.display = "block";
-          $("#auditStatusMsgBlock").show(); 
-          // document.getElementById('AuditStatusBlock').style.display = "none";
-          $("#AuditStatusBlock").hide(); 
-        }
-        else {
+        }else {
           document.getElementById('auditStatusMsgBlock').style.display = "block";
           document.getElementById('AuditStatusBlock').style.display = "none";
           $("#InvoiceToAuditWrapper").hide();
           $("#CreateAuditButtonBlock").show();          
             console.log('No audit data available for the selected invoice.');           
         }
-      
-        
-      
+        if (auditData.Audit_Status !== "Completed") {
+          document.getElementById('AuditStatusBlock').style.display = "Block";
+          document.getElementById('auditStatusDisplay').innerHTML = auditData.Audit_Status;  
+          
+        }
+        if (auditData == null) {
+          document.getElementById('auditStatusMsgBlock').style.display = "block";
+          document.getElementById('AuditStatusBlock').style.display = "none";
+        }
     } catch (error) {
         console.error('Error fetching and setting audit data:', error);
     } 

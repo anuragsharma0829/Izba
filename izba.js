@@ -1,3 +1,4 @@
+
 let postId;
 let fcobjId;
 let EstimatPostid;
@@ -1128,7 +1129,6 @@ function setEndDateMin() {
   minEndDate.setDate(minEndDate.getDate() + 1); // Increment by 1 day to disable the selected start date
   endDateInput.min = minEndDate.toISOString().slice(0, 10);
 }
-
 
 function createDoughnutChart(dataValues) {
   new Chart(document.getElementById("doughnut-chart"), {
