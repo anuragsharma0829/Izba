@@ -64,8 +64,8 @@ async function setAuditDataInFields(objectId) {
             document.getElementById('International.Weight_Unit').innerHTML = auditData.Invoice_dashboard.International.Weight_Unit || 0;
  
             // Storage Data
-            document.getElementById('Storage_Cost').innerHTML = auditData.Storage_dashboard.Storage_Cost || 0;
-            document.getElementById('Storage_Cost_Per_Order').innerHTML = auditData.Storage_dashboard.Storage_Cost_Per_Order.toFixed(3) || 0; 
+            // document.getElementById('Storage_Cost').innerHTML = auditData.Storage_dashboard.Storage_Cost || 0;
+            // document.getElementById('Storage_Cost_Per_Order').innerHTML = auditData.Storage_dashboard.Storage_Cost_Per_Order.toFixed(3) || 0; 
 
             // Audit Dashboard Data
 
@@ -126,7 +126,7 @@ async function setAuditDataInFields(objectId) {
           console.log(auditData.Audit_Status);
           document.getElementById('AuditStatusBlock').style.display = "Block";
           document.getElementById('auditStatusDisplay').innerHTML = auditData.Audit_Status;
-          $("#CreateAuditButtonBlock").hide();
+          $("#CreateAuditButtonBlock").show();
         }
         if (auditData == null) {
           document.getElementById('auditStatusMsgBlock').style.display = "block";
