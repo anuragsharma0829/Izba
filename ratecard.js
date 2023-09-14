@@ -207,34 +207,34 @@ function displayStorageData(auditData) {
 
 // Zone Data Display
 
-function displayZoneData(auditData) {
-  const table1 = document.getElementById("zone");
-  const Zones = auditData.Invoice_dashboard.Zone || 0;
+// function displayZoneData(auditData) {
+//   const table1 = document.getElementById("zone");
+//   const Zones = auditData.Invoice_dashboard.Zone || 0;
 
-  if (Zones.length === 0) {
-    // Display the "No Service Data Found" message
-    document.getElementById("zone-no-data-message").style.display = "block";
-  } else {
-    // Hide the "No Service Data Found" message
-    document.getElementById("zone-no-data-message").style.display = "none";
+//   if (Zones.length === 0) {
+//     // Display the "No Service Data Found" message
+//     document.getElementById("zone-no-data-message").style.display = "block";
+//   } else {
+//     // Hide the "No Service Data Found" message
+//     document.getElementById("zone-no-data-message").style.display = "none";
 
-    Zones.forEach((item) => {
-      const row = table1.insertRow(-1);
-      const zoneCell = row.insertCell(0);
-      const totalZoneCell = row.insertCell(1);
-      const percentageCell = row.insertCell(2);
-      const totalZone = item.Zone || 0;
-      const totalZoneCount = item.Orders || 0;
-      zoneCell.textContent = totalZone;
-      totalZoneCell.textContent = item.Orders || "N/A";
+//     Zones.forEach((item) => {
+//       const row = table1.insertRow(-1);
+//       const zoneCell = row.insertCell(0);
+//       const totalZoneCell = row.insertCell(1);
+//       const percentageCell = row.insertCell(2);
+//       const totalZone = item.Zone || 0;
+//       const totalZoneCount = item.Orders || 0;
+//       zoneCell.textContent = totalZone;
+//       totalZoneCell.textContent = item.Orders || "N/A";
 
-      // Calculate percentage
-      const percentageOfOrders = (
-        (totalZoneCount / auditData.Invoice_dashboard.No_of_orders) * 100 ).toFixed(3);
-      percentageCell.textContent = `${percentageOfOrders}%`;
-    });
-  }
-}
+//       // Calculate percentage
+//       const percentageOfOrders = (
+//         (totalZoneCount / auditData.Invoice_dashboard.No_of_orders) * 100 ).toFixed(3);
+//       percentageCell.textContent = `${percentageOfOrders}%`;
+//     });
+//   }
+// }
 
 // State Data Display
 
@@ -267,31 +267,31 @@ function displayStateData(auditData) {
 }
 
 //  auditService data display*******************************************
-function displayAuditServiceData(auditData) {
-  const table4 = document.getElementById("auditService");
-  const auditService = auditData.Audit_dashboard.Service || 0;
+// function displayAuditServiceData(auditData) {
+//   const table4 = document.getElementById("auditService");
+//   const auditService = auditData.Audit_dashboard.Service || 0;
 
-  if (auditService.length === 0) {
-    // Display the "No Service Data Found" message
-    // document.getElementById("auditService-no-data-message").style.display = "block";
-  } else {
-    // Hide the "No Service Data Found" message
-    // document.getElementById("auditService-no-data-message").style.display = "none";
+//   if (auditService.length === 0) {
+//     // Display the "No Service Data Found" message
+//     // document.getElementById("auditService-no-data-message").style.display = "block";
+//   } else {
+//     // Hide the "No Service Data Found" message
+//     // document.getElementById("auditService-no-data-message").style.display = "none";
 
-    auditService.forEach((item) => {
-      const row = table4.insertRow(-1);
-      const Service = row.insertCell(0);
-      const totalComplianceCell = row.insertCell(1);
-      const Non_Compliance = row.insertCell(2);
-      const Compliance_Percentage = row.insertCell(3);
+//     auditService.forEach((item) => {
+//       const row = table4.insertRow(-1);
+//       const Service = row.insertCell(0);
+//       const totalComplianceCell = row.insertCell(1);
+//       const Non_Compliance = row.insertCell(2);
+//       const Compliance_Percentage = row.insertCell(3);
 
-      Service.textContent = item.Service || "N/A";
-      totalComplianceCell.textContent = item.Compliance || 0;
-      Non_Compliance.textContent = item.Non_Compliance || 0;
-      Compliance_Percentage.textContent = item.Compliance_Percentage.toFixed(3) + "%" || 0;
-    });
-  }
-}
+//       Service.textContent = item.Service || "N/A";
+//       totalComplianceCell.textContent = item.Compliance || 0;
+//       Non_Compliance.textContent = item.Non_Compliance || 0;
+//       Compliance_Percentage.textContent = item.Compliance_Percentage.toFixed(3) + "%" || 0;
+//     });
+//   }
+// }
 
 // function for show CSV file detail csv
 
