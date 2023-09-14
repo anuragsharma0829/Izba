@@ -4,6 +4,7 @@ const objctID = datarate.objectId;
 const usertoken = datarate.token;
 
 // *****************************
+// Need to check commit cahnges reflect in the cdn or not
 
 // Wait for the DOM to be ready
 document.addEventListener("DOMContentLoaded", function () {
