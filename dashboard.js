@@ -49,49 +49,6 @@ $(document).ready(function () {
 });
 
 
-// Create Brand and Check Validation
-// function showError(elementId, message) {
-//   const errorElement = $(elementId);
-//   errorElement.text(message).css({ color: "red", display: "block" });
-// }
-
-// function hideError(elementId) {
-//   const errorElement = $(elementId);
-//   errorElement.text("").css({ display: "none" });
-// }
-
-// function showGenericError() {
-//   showError("#errorContainer", "Please fill out all the required fields.");
-// }
-
-// $(document).ready(function () {
-//   $("#Brand-Name").on("input", function () {
-//     let BrandName = $("#Brand-Name").val();
-//     if (!BrandName) {
-//       showError("#brandNameError", "Brand name should not be blank");
-//     } else {
-//       hideError("#brandNameError");
-//     }
-//   });
-
-//   $("#Brand-URl").on("input", function () {
-//     let BrandURl = $("#Brand-URl").val();
-//     if (!BrandURl) {
-//       showError("#Brand-URlerror", "Brand URL should not be blank");
-//     } else {
-//       hideError("#Brand-URlerror");
-//     }
-//   });
-
-//   $("#ShoppingCartDropDown").on("input", function () {
-//     let ShoppingCartDropDown = $("#ShoppingCartDropDown").val();
-//     if (!ShoppingCartDropDown) {
-//       showError("#ShoppingCartDropDown", "Please select shopping cart");
-//     } else {
-//       hideError("#ShoppingCartDropDown");
-//     }
-//   });
-
   $("#CreateBrandButton").click(function () {
     let BrandName = $("#Brand-Name").val();
     let BrandURl = $("#Brand-URl").val();
